@@ -18,14 +18,14 @@ public class RegistrationServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-	
+	//using parameterless constructor of UserDao.java 
 		try(userDao dao= new userDao()){
 			UserPOJO user=new UserPOJO();
 			user.setFullName(request.getParameter("fullname"));
 			user.setEmail(request.getParameter("email"));
 			user.setPassword(request.getParameter("password"));
 			user.setBirthDate(request.getParameter("birthdate"));
-			System.out.println(user.toString());
+		//	System.out.println(user.toString());
 			dao.registerNewUser(user);
 		
 			
