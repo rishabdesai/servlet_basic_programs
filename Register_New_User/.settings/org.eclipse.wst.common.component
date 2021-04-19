@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="LoginPage_Validation_database">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <property name="context-root" value="LoginPage_Validation_database"/>
+        <property name="java-output-path" value="/LoginPage_Validation_database/build/classes"/>
+    </wb-module>
+</project-modules>
