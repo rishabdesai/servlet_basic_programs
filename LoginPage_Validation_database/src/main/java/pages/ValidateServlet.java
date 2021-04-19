@@ -20,10 +20,6 @@ public class ValidateServlet extends HttpServlet {
 			String password = request.getParameter("password");
 			System.out.println(email+"  :  "+password);
 			
-			
-			
-			
-			
 			try(userDao dao= new userDao()){
 				UserPOJO user = dao.validateEmailPassword(email, password);
 			
