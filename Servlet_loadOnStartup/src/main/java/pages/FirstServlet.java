@@ -1,3 +1,5 @@
+//to initialize servlet at the time of initialization and at at first request from client,
+//then use loadOnStartup
 package pages;
 
 import java.io.IOException;
