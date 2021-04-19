@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.userDao;
-import pojo.User;
+import pojo.UserPOJO;
 
 
 @WebServlet("/validate")
@@ -25,7 +25,7 @@ public class ValidateServlet extends HttpServlet {
 			
 			
 			try(userDao dao= new userDao()){
-				User user = dao.validateEmailPassword(email, password);
+				UserPOJO user = dao.validateEmailPassword(email, password);
 			
 				if (user !=null) {
 					System.out.println(user.toString());

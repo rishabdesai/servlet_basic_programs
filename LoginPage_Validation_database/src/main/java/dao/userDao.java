@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import pojo.User;
+import pojo.UserPOJO;
 import utils.DButils;
 
 public class userDao implements AutoCloseable{
@@ -18,13 +18,13 @@ private PreparedStatement validateStatement;
 	}
 
 
-	public User validateEmailPassword(String email, String password) throws Exception {
+	public UserPOJO validateEmailPassword(String email, String password) throws Exception {
 		this.validateStatement.setString(1, email);
 		this.validateStatement.setString(2, password);
 		
 		try(ResultSet rs = this.validateStatement.executeQuery()){
 		if(rs.next())	
-			return new User(rs.getString("full_name"),rs.getString("email"),rs.getString("password"),rs.getString("birthdate")); 
+			return new UserPOJO(rs.getString("full_name"),rs.getString("email"),rs.getString("password"),rs.getString("birthdate")); 
 		}
 		
 		

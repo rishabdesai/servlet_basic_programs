@@ -1,15 +1,15 @@
 package pojo;
 
 
-public class User {
+public class UserPOJO {
 	private String fullName, email, password;
 	private String birthDate;
 	
-	public User() {
+	public UserPOJO() {
 		
 	}
 
-	public User(String fullName, String email, String password, String birthdate) {
+	public UserPOJO(String fullName, String email, String password, String birthdate) {
 		this.fullName = fullName;
 		this.email = email;
 		this.password = password;
