@@ -20,7 +20,7 @@ public class SecondServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		String name= (String) session.getAttribute("SessionName");
-		
+		//session.invalidate();  //to invalidate the session
 		response.setContentType("text/html");
 		try(PrintWriter out = response.getWriter()){
 			out.println("<html>");
