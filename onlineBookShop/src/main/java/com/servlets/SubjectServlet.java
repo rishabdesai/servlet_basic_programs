@@ -47,7 +47,9 @@ public class SubjectServlet extends HttpServlet {
 		out.println("<input type='submit' value='show books'/>");
 		out.println("</form>");
 		
-		
+		out.println("<form action='showcart'>");
+		out.println("<input type='submit' value='show cart'/>");
+		out.println("</form>");
 		
 		out.println("</body>");
 		out.println("</html>");

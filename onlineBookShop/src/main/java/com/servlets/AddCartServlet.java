@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.entities.Book;
+
 
 public class AddCartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -50,20 +52,24 @@ public class AddCartServlet extends HttpServlet {
 		
 		String[] bookIds =req.getParameterValues("checkbox_subject");
 		
-		int newBooks=0;
-		if(bookIds !=null) {
-			newBooks=bookIds.length;
-			for(String bookId :bookIds) {
-				int id=Integer.parseInt(bookId);
-				list.add(id);
-			
-			}
-			System.out.println("Arrays : "+Arrays.toString(bookIds));
+		for(String b: bookIds) {
+			System.out.println(b);
 		}
-		req.setAttribute("msg","new book added"+newBooks);
 		
+//		int newBooks=0;
+//		if(bookIds !=null) {
+//			newBooks=bookIds.length;
+//			for(String bookId :bookIds) {
+//				int id=Integer.parseInt(bookId);
+//				list.add(id);
+//			
+//			}
+//			System.out.println("Arrays : "+Arrays.toString(bookIds));
+//		}
+//		req.setAttribute("msg","new book added"+newBooks);
+//		
 		
-		
+		//once user click on 'add to cart' button of bookServlet.java, then he is forwarded to subjectServlet.java
 		RequestDispatcher rd = req.getRequestDispatcher("subjects");
 		rd.forward(req, resp);
 	}

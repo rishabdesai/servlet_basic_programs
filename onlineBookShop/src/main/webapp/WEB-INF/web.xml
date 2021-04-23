@@ -24,7 +24,6 @@
     <servlet-name>BookServlet</servlet-name>
     <url-pattern>/books</url-pattern>
   </servlet-mapping>
- 
   <servlet>
     <servlet-name>AddCartServlet</servlet-name>
     <servlet-class>com.servlets.AddCartServlet</servlet-class>
@@ -32,5 +31,23 @@
   <servlet-mapping>
     <servlet-name>AddCartServlet</servlet-name>
     <url-pattern>/addcart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <servlet-name>ShowCartServlet</servlet-name>
+    <servlet-class>com.servlets.ShowCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowCartServlet</servlet-name>
+    <url-pattern>/showcart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
   </servlet-mapping>
 </web-app>
