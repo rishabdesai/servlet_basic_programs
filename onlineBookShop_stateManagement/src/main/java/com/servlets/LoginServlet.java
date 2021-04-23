@@ -69,7 +69,12 @@ public class LoginServlet extends HttpServlet {
 				
 			// if success go to subject servlet
 			resp.sendRedirect("subjects");
+			
+			//===========================================
+			// Url-rewriting 
 			//resp.sendRedirect(resp.encodeRedirectURL("subjects"));
+			//===========================================		
+		
 		} else {
 			// if failed show message.
 			resp.setContentType("text/html");

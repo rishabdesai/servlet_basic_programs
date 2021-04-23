@@ -65,6 +65,13 @@ public class SubjectServlet extends HttpServlet {
 		out.println("<input type='submit' value='show cart'/>");
 		out.println("</form>");
 		
+		//""""""""""""""""""""""""""""""""""""""""""""""
+		//request scope - from AddCartServlet.java page
+		String msg = (String) req.getAttribute("msg");
+		if(msg !=null)
+			out.println(msg);
+		//""""""""""""""""""""""""""""""""""""""""""""""
+						
 		out.println("</body>");
 		out.println("</html>");
 	

@@ -39,9 +39,13 @@ public class AddCartServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		List<Integer> cart = (List<Integer>) session.getAttribute("cart");
 		//now check details at ShowCartServlet.java
+		//++++++++++++++++++++++++++++++++++++++++++++++++++
+
 		
+		//""""""""""""""""""""""""""""""""""""""""""""""
+		//request scope
 		String[] bookIds =req.getParameterValues("checkbox_subject");
-		
+	
 		int newBooks=0;
 		if(bookIds !=null) {
 			newBooks=bookIds.length;
@@ -51,8 +55,8 @@ public class AddCartServlet extends HttpServlet {
 			}
 		}
 		req.setAttribute("msg","new book added"+newBooks);
-		//++++++++++++++++++++++++++++++++++++++++++++++++++
-		
+		//check subjectServlet.java class
+		//"""""""""""""""""""""""""""""""""""""""""""""""
 		
 		
 		for(String b: bookIds) {
