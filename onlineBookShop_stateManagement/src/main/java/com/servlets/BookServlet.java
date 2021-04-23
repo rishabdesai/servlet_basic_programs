@@ -42,7 +42,7 @@ public class BookServlet extends HttpServlet {
 				out.println("<title>BookShop</title>");
 				out.println("</head>");
 				out.println("<body>");
-				
+				out.println("<a href='subjects'>Back</a>");
 				//-------------------------------------------------------
 				//cookie step3
 				//receive cookie from Loginservlet.java 
@@ -79,6 +79,8 @@ public class BookServlet extends HttpServlet {
 						e.printStackTrace();
 					}
 				}
+				
+
 				out.println("</body>");
 				out.println("</html>");
 	}
